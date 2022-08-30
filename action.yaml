@@ -1,0 +1,11 @@
+name: 'Setup ZeroTier'
+description: 'Join and Leave a ZeroTier Network'
+inputs:
+  network_id:
+    description: 'id of the network to join'
+    required: true
+
+runs:
+  using: 'node16'
+  main: './dist/join/index.js'
+  post: './dist/leave/index.js'
